@@ -702,6 +702,18 @@ video {
   width: 1rem;
 }
 
+img {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: linear;
+  transition-duration: 100ms;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
 .container {
   width: 100%;
 }
@@ -2119,15 +2131,6 @@ video {
     no-repeat padding-box;
   background: transparent linear-gradient(95deg, #dd1818 0%, #870000 100%) 0% 0%
     no-repeat padding-box;
-}
-
-img:hover {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-timing-function: linear;
-  transition-duration: 100ms;
-  transform: scale(1.05);
 }
 
 .dropdown {

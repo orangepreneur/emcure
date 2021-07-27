@@ -78,6 +78,12 @@
   img:hover {
     transform: scale(1.02);
   }
+  .zoomOnHover {
+    @apply transition-all ease-linear duration-100;
+  }
+  .slideAnimation:hover .zoomOnHover {
+    @apply transform scale-105;
+  }
 }
 @tailwind utilities;
 

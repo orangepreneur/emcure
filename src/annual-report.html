@@ -5,6 +5,10 @@
     integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+    .hover\:redStrip {
+      transition: all ease-in-out 0.2s;
+    }
+
     .onHover:hover .hover\:redStrip {
       background: transparent linear-gradient(95deg, var(--unnamed-color-dd1818) 0%, #870000 100%) 0% 0% no-repeat padding-box;
       background: transparent linear-gradient(95deg, #dd1818 0%, #870000 100%) 0% 0% no-repeat padding-box;
@@ -62,14 +66,14 @@
           <div class=" p-8  w-4/6">
             <h3 class="h2 lg:text-22">Annual Report 2020</h3>
           </div>
-          <div
-            class="hover:redStrip bg-white m-1 w-1/6 self-stretch text-lg text-semibold flex items-center justify-center rounded-lg text-white">
+          <a href="./assets/2020.pdf"
+            class="hover:redStrip cursor-pointer bg-white m-1 w-1/6 self-stretch text-lg text-semibold flex items-center justify-center rounded-lg text-white">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg> &nbsp;&nbsp;Download
-          </div>
+          </a>
         </div>
       </div>
 
@@ -80,7 +84,7 @@
         </div>
       </section>
       <div
-        class="onHover -mt-10 max-w-wrapper mx-auto mb-20 w-full bg-white rounded-lg hover:shadow-2xl shadow-transparent border border-gray-300">
+        class="onHover  -mt-10 max-w-wrapper mx-auto mb-20 w-full bg-white rounded-lg hover:shadow-2xl shadow-transparent border border-gray-300">
         <div class="flex items-center justify-around">
           <div class=" p-8  ">
             <img src="./assets//images/book.svg" alt="report">
@@ -88,38 +92,19 @@
           <div class=" p-8  w-4/6">
             <h3 class="h2 lg:text-22">Annual Report 2018-19</h3>
           </div>
-          <div
-            class="hover:redStrip bg-white  m-1 w-1/6 self-stretch text-lg text-semibold flex items-center justify-center rounded-lg text-white">
+          <a href="./assets/2018_19.pdf"
+            class="hover:redStrip cursor-pointer bg-white  m-1 w-1/6 self-stretch text-lg text-semibold flex items-center justify-center rounded-lg text-white">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>&nbsp;&nbsp;Download
-          </div>
+          </a>
         </div>
       </div>
     </div>
   </section>
   <!-- About Us Footer -->
-  <partial name="redstrip-section.html" title="Know More About Us" css-prev="myswiper-button-prev"
-    css-next="myswiper-button-next" />
-  <section class="-mt-20">
-    <div class="w-full h-350 overflow-hidden swiper-container mySwiper">
-      <div class="flex swiper-wrapper">
-        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore2.png"
-          title="Vision & Values" />
-        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore3.png"
-          title="Milestones" />
-        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore4.png"
-          title="Leadership" />
-        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore1.png"
-          title="Awards & Recognition" />
-        <partial name="slider/slide-square.html" image="./assets/images/csr.png" title="CSR" />
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-  <div class="md:h-20"></div>
   <partial name="redstrip-section.html" title="Quick Explore" css-prev="myswiper2-button-prev"
     css-next="myswiper2-button-next" />
   <section class="-mt-20">

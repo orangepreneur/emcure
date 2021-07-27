@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<partial title="Annual Report" name="head.html">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+    integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .onHover:hover .hover\:redStrip {
+      background: transparent linear-gradient(95deg, var(--unnamed-color-dd1818) 0%, #870000 100%) 0% 0% no-repeat padding-box;
+      background: transparent linear-gradient(95deg, #dd1818 0%, #870000 100%) 0% 0% no-repeat padding-box;
+    }
+  </style>
+</partial>
+
+<body>
+  <partial name="header.html" />
+  <section class="md:h-500 h-36 px-4 md:px-8 lg:px-0 w-full flex items-center" style="
+        background-image: url('./assets/images/aboutus/awards/banner.jpg');
+        background-size: cover;
+      ">
+    <div class="container max-w-wrapper mx-auto">
+      <div class="my-8 md:my-20 lg:my-0">
+        <h1 class="
+              uppercase
+              tracking-heading
+              text-xl
+              md:text-2xl
+              font-semibold
+              md:mb-3.5
+            ">
+
+        </h1>
+        <div class="redStrip h-xs md:h-2 w-20"></div>
+        <h2 class="
+              font-semibold
+              md:mt-4
+              text-xl
+              md:text-54 md:leading-81
+              tracking-tight
+            ">
+          Annual Report
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <!-- Brand Section Content -->
+    <div>
+      <!-- 2021 -->
+      <section class="redStrip pt-10 pb-10">
+        <div class="container mx-auto max-w-wrapper px-4 md:px-8 lg:px-0">
+          <h2 class="h2 text-white text-3xl opacity-40 2xl:text-56">2021</h2>
+        </div>
+      </section>
+      <div
+        class="onHover -mt-10 max-w-wrapper mx-auto mb-20 w-full bg-white rounded-lg hover:shadow-2xl shadow-transparent border border-gray-300">
+        <div class="flex items-center justify-around">
+          <div class=" p-8  ">
+            <img src="./assets//images/book.svg" alt="report">
+          </div>
+          <div class=" p-8  w-4/6">
+            <h3 class="h2 lg:text-22">Annual Report 2020</h3>
+          </div>
+          <div
+            class="hover:redStrip bg-white m-1 w-1/6 self-stretch text-lg text-semibold flex items-center justify-center rounded-lg text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg> &nbsp;&nbsp;Download
+          </div>
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <section class="redStrip pt-10 pb-10">
+        <div class="container mx-auto max-w-wrapper px-4 md:px-8 lg:px-0">
+          <h2 class="h2 text-white text-3xl opacity-40 2xl:text-56">2018-19</h2>
+        </div>
+      </section>
+      <div
+        class="onHover -mt-10 max-w-wrapper mx-auto mb-20 w-full bg-white rounded-lg hover:shadow-2xl shadow-transparent border border-gray-300">
+        <div class="flex items-center justify-around">
+          <div class=" p-8  ">
+            <img src="./assets//images/book.svg" alt="report">
+          </div>
+          <div class=" p-8  w-4/6">
+            <h3 class="h2 lg:text-22">Annual Report 2018-19</h3>
+          </div>
+          <div
+            class="hover:redStrip bg-white  m-1 w-1/6 self-stretch text-lg text-semibold flex items-center justify-center rounded-lg text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>&nbsp;&nbsp;Download
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Us Footer -->
+  <partial name="redstrip-section.html" title="Know More About Us" css-prev="myswiper-button-prev"
+    css-next="myswiper-button-next" />
+  <section class="-mt-20">
+    <div class="w-full h-350 overflow-hidden swiper-container mySwiper">
+      <div class="flex swiper-wrapper">
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore2.png"
+          title="Vision & Values" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore3.png"
+          title="Milestones" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore4.png"
+          title="Leadership" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore1.png"
+          title="Awards & Recognition" />
+        <partial name="slider/slide-square.html" image="./assets/images/csr.png" title="CSR" />
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <div class="md:h-20"></div>
+  <partial name="redstrip-section.html" title="Quick Explore" css-prev="myswiper2-button-prev"
+    css-next="myswiper2-button-next" />
+  <section class="-mt-20">
+    <div class="w-full h-350 overflow-hidden swiper-container mySwiper2">
+      <div class="flex swiper-wrapper">
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/4.png" title="About us" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/1.png" title="Research" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/2.png" title="Careers" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/3.png" title="Blog" />
+      </div>
+    </div>
+  </section>
+  <div class="md:h-20"></div>
+  <partial name="footer.html" />
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+    integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./script.js"></script>
+  <script>
+    const toggleMenu = () => {
+      document.getElementById("menu").classList.toggle("hidden");
+    };
+    allMenuItems = document.querySelectorAll("#menu li");
+    allMenuItems.forEach((item) => {
+      if (item.firstElementChild) {
+        item.addEventListener("click", () => {
+          item.firstElementChild.classList.toggle("hidden");
+        });
+      }
+    });
+    window.onload = (event) => {
+      var swipera = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        slidesPerView: "auto",
+        autoplay: {
+          delay: 3000,
+        },
+        loop: true,
+        navigation: {
+          nextEl: ".myswiper-button-next",
+          prevEl: ".myswiper-button-prev",
+        },
+      });
+      var swiperb = new Swiper(".mySwiper2", {
+        spaceBetween: 30,
+        slidesPerView: "auto",
+        autoplay: {
+          delay: 3000,
+        },
+        loop: true,
+        navigation: {
+          nextEl: ".myswiper2-button-next",
+          prevEl: ".myswiper2-button-prev",
+        },
+      });
+      const tabs = document.querySelectorAll(".tabs");
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((tab) => {
+            if (!tab.classList.contains("opacity-30"))
+              return tab.classList.add("opacity-30");
+          });
+          tab.classList.remove("opacity-30");
+          const content = tab.getAttribute("data-id");
+          const allTabContent = document.querySelectorAll(".tab-content");
+          allTabContent.forEach((tabContent) => {
+            tabContent.classList.add("hidden");
+          });
+          document.getElementById(content).classList.remove("hidden");
+        });
+      });
+    };
+  </script>
+</body>
+
+</html>

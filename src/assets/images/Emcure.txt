@@ -1,0 +1,5 @@
+Color Code : #c90101
+gradient : #870000 - #dd1818
+Footer BG Color: #282b30
+Headings : Poppins Semibold
+Content : Poppins Medium & Regular

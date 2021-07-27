@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<partial title="About Us - Milestones" name="head.html">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* The actual timeline (the vertical ruler) */
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      background-color: #707070;
+      opacity: 0.15;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    /* tl-container around content */
+    .tl-container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    /* The circles on the timeline */
+    .tl-container::after {
+      content: "";
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      right: -20px;
+      background: transparent linear-gradient(180deg, var(--unnamed-color-dd1818) 0%, #870000 100%) 0% 0% no-repeat padding-box;
+      background: transparent linear-gradient(180deg, #dd1818 0%, #870000 100%) 0% 0% no-repeat padding-box;
+      opacity: 1;
+      border: 4px solid white;
+      box-shadow: 0px 3px 6px #00000029;
+      top: 50%;
+      border-radius: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+
+    /* Place the tl-container to the left */
+    .left {
+      left: 0;
+    }
+
+    /* Place the tl-container to the right */
+    .right {
+      left: 50%;
+    }
+
+    /* Add arrows to the left tl-container (pointing right) */
+    /* .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+      } */
+
+    /* Add arrows to the right tl-container (pointing left) */
+    /* .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      } */
+
+    /* Fix the circle for tl-containers on the right side */
+    .right::after {
+      left: -12px;
+    }
+
+    /* The actual content */
+    .content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      border: 1px solid #f3f3f3;
+    }
+
+    .content:hover {
+      border: 1px solid #dd1818;
+      box-shadow: 0px 1px 14px #00000033;
+    }
+
+    .content:hover h2 {
+      color: #dd1818;
+      opacity: 1;
+    }
+
+    .content h2 {
+      text-align: left;
+      font: normal normal bold 54px/81px Poppins;
+      letter-spacing: -1.35px;
+      color: #2a2d2e;
+      opacity: 0.2;
+    }
+
+    .content p {
+      text-align: left;
+      font: normal normal normal 18px/27px Poppins;
+      letter-spacing: -0.45px;
+      color: #72787a;
+      opacity: 1;
+    }
+
+    /* Media queries - Responsive timeline on screens less than 600px wide */
+    @media screen and (max-width: 600px) {
+
+      /* Place the timelime to the left */
+      .timeline::after {
+        left: 31px;
+      }
+
+      /* Full-width tl-containers */
+      .tl-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      /* Make sure that all arrows are pointing leftwards */
+      .tl-container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+
+      /* Make sure all circles are at the same spot */
+      .left::after,
+      .right::after {
+        left: 15px;
+      }
+
+      /* Make all right tl-containers behave like the left ones */
+      .right {
+        left: 0%;
+      }
+    }
+  </style>
+</partial>
+
+<body>
+  <partial name="header.html" />
+  <section class="md:h-500 h-36 px-4 md:px-8 lg:px-0 w-full flex items-center" style="
+        background-image: url('./assets/images/aboutus/milestones/banner.jpg');
+        background-size: cover;
+      ">
+    <div class="container max-w-wrapper mx-auto">
+      <div class="my-8 md:my-20 lg:my-0">
+        <h1 class="
+              uppercase
+              tracking-heading
+              text-xl
+              md:text-2xl
+              font-semibold
+              md:mb-3.5
+            ">
+          about us
+        </h1>
+        <div class="redStrip h-xs md:h-2 w-20"></div>
+        <h2 class="
+              font-semibold
+              md:mt-4
+              text-xl
+              md:text-54 md:leading-81
+              tracking-tight
+            ">
+          Milestones
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section class="container max-w-wrapper mx-auto py-20">
+    <div class="timeline">
+      <div class="tl-container left">
+        <div class="content">
+          <h2>2021</h2>
+          <p>mRNA vaccine enters trials</p>
+        </div>
+      </div>
+      <div class="tl-container right">
+        <div class="content">
+          <h2>2019</h2>
+          <p>
+            Sanand Injectables facility commenced USFDA approval of Sanand and
+            F-II (API) TENECTASE approved as emergency care for stroke
+          </p>
+        </div>
+      </div>
+      <div class="tl-container left">
+        <div class="content">
+          <h2>2018</h2>
+          <p>US manufacturing facility expansion</p>
+        </div>
+      </div>
+      <div class="tl-container right">
+        <div class="content">
+          <h2>2016</h2>
+          <p>Acquired Bharadwaj Pharma GMBH in Germany</p>
+        </div>
+      </div>
+      <div class="tl-container left">
+        <div class="content">
+          <h2>2015</h2>
+          <p>Acquired Marcan Pharmaceuticals Inc., Canada</p>
+        </div>
+      </div>
+      <div class="tl-container right">
+        <div class="content">
+          <h2>2014</h2>
+          <p>
+            Acquired Tillomed Laboratories, United Kingdom. Bain capital
+            acquired Blackstone’s stake in Emcure
+          </p>
+        </div>
+      </div>
+      <div class="tl-container left">
+        <div class="content">
+          <h2>2012</h2>
+          <p>
+            Worldwide rights of BICNU acquired Commenced EU operations with
+            formation of Emcure UK
+          </p>
+        </div>
+      </div>
+      <div class="tl-container right">
+        <div class="content">
+          <h2>2010</h2>
+          <p>Cytotoxic facility commenced in Hinjewadi</p>
+        </div>
+      </div>
+      <div class="tl-container left">
+        <div class="content">
+          <h2>2009</h2>
+          <p>Solid Dosage facility commenced in Jammu</p>
+        </div>
+      </div>
+      <div class="tl-container right">
+        <div class="content">
+          <h2>2007</h2>
+          <p>
+            USFDA approvals received for injectable facility at Hinjewadi.
+            First in-house biosimilar TNK-Tpa launched
+          </p>
+        </div>
+      </div>
+      <div class="tl-container left">
+        <div class="content">
+          <h2>2006</h2>
+          <p>
+            Blackstone’s first investment in India at Emcure API facility at
+            Kurkumbh commencedInjectable & Emcure Biotech Ltd. (now Gennova
+            biopharmaceuticals limited) facility operational
+          </p>
+        </div>
+      </div>
+      <div class="tl-container right">
+        <div class="content">
+          <h2>2005</h2>
+          <p>
+            Solid Oral Facility at Hinjawadi commenced & first USFDA approval
+            granted
+          </p>
+        </div>
+      </div>
+      <div class="tl-container left">
+        <div class="content">
+          <h2>2004</h2>
+          <p>
+            Emcure Pharmaceutical USA (now Heritage Pharmaceutical Labs)
+            incorporated & in-house API R&D commenced
+          </p>
+        </div>
+      </div>
+      <div class="tl-container right">
+        <div class="content">
+          <h2>2002</h2>
+          <p>
+            Zuventus Healthcare Limited incorporated & First Chiral product
+            launched
+          </p>
+        </div>
+      </div>
+      <div class="tl-container left">
+        <div class="content">
+          <h2>2001</h2>
+          <p>Gennova Biopharmaceuticals Limited incorporated</p>
+        </div>
+      </div>
+      <div class="tl-container right">
+        <div class="content">
+          <h2>1995</h2>
+          <p>Launched Indian Formulation Business</p>
+        </div>
+      </div>
+      <div class="tl-container left">
+        <div class="content">
+          <h2>1983</h2>
+          <p>First manufacturing facility operational in Bhosari</p>
+        </div>
+      </div>
+      <div class="tl-container right">
+        <div class="content">
+          <h2>1981</h2>
+          <p>Emcure Pharmaceuticals Private Limited incorporated</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Us Footer -->
+  <partial name="redstrip-section.html" title="Know More About Us" css-prev="myswiper-button-prev"
+    css-next="myswiper-button-next" />
+  <section class="-mt-20">
+    <div class="w-full h-350 overflow-hidden swiper-container mySwiper">
+      <div class="flex swiper-wrapper">
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore2.png"
+          title="Vision & Values" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore3.png"
+          title="Milestones" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore4.png"
+          title="Leadership" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore1.png"
+          title="Awards & Recognition" />
+        <partial name="slider/slide-square.html" image="./assets/images/csr.png" title="CSR" />
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <div class="md:h-20"></div>
+  <partial name="redstrip-section.html" title="Quick Explore" css-prev="myswiper2-button-prev"
+    css-next="myswiper2-button-next" />
+  <section class="-mt-20">
+    <div class="w-full h-350 overflow-hidden swiper-container mySwiper2">
+      <div class="flex swiper-wrapper">
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/4.png" title="About us" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/1.png" title="Research" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/2.png" title="Careers" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/3.png" title="Blog" />
+      </div>
+    </div>
+  </section>
+  <div class="md:h-20"></div>
+  <partial name="footer.html" />
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./script.js"></script>
+  <script>
+    const toggleMenu = () => {
+      document.getElementById("menu").classList.toggle("hidden");
+    };
+    allMenuItems = document.querySelectorAll("#menu li");
+    allMenuItems.forEach((item) => {
+      if (item.firstElementChild) {
+        item.addEventListener("click", () => {
+          item.firstElementChild.classList.toggle("hidden");
+        });
+      }
+    });
+    window.onload = (event) => {
+      var swipera = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        slidesPerView: "auto",
+        autoplay: {
+          delay: 3000,
+        },
+        loop: true,
+        navigation: {
+          nextEl: ".myswiper-button-next",
+          prevEl: ".myswiper-button-prev",
+        },
+      });
+      var swiperb = new Swiper(".mySwiper2", {
+        spaceBetween: 30,
+        slidesPerView: "auto",
+        autoplay: {
+          delay: 3000,
+        },
+        loop: true,
+        navigation: {
+          nextEl: ".myswiper2-button-next",
+          prevEl: ".myswiper2-button-prev",
+        },
+      });
+      const expandables = document.querySelectorAll(".dropdown");
+      expandables.forEach((expandable) => {
+        expandable.parentElement.style.minHeight =
+          expandable.offsetHeight + 32 + "px";
+        expandable.addEventListener("click", () => {
+          expandable.parentElement.classList.toggle("h-28");
+
+          expandable.parentElement.classList.toggle("shadow-2xl");
+          expandable.parentElement.classList.toggle("my-10");
+          expandable.nextElementSibling.classList.toggle("opacity-0");
+
+          expandable.classList.toggle("opened");
+        });
+      });
+    };
+  </script>
+</body>
+
+</html>

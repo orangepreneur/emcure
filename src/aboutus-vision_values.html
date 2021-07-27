@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<partial title="About Us - Vision & Values" name="head.html"></partial>
+
+<body>
+  <partial name="header.html" />
+  <section class="md:h-500 h-36 px-4 md:px-8 lg:px-0 w-full flex items-center" style="
+        background-image: url('./assets/images/aboutus/vision_values/banner.png');
+        background-size: cover;
+      ">
+    <div class="container max-w-wrapper mx-auto">
+      <div class="my-8 md:my-20 lg:my-0">
+        <h1 class="
+              uppercase
+              tracking-heading
+              text-xl
+              md:text-2xl
+              font-semibold
+              md:mb-3.5
+            ">
+          about us
+        </h1>
+        <div class="redStrip h-xs md:h-2 w-20"></div>
+        <h2 class="
+              font-semibold
+              md:mt-4
+              text-xl
+              md:text-54 md:leading-81
+              tracking-tight
+            ">
+          Vision & Values
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section class="bg-primary-footer py-20">
+    <div class="
+          container
+          text-center
+          mx-auto
+          max-w-4xl
+          px-4
+          md:px-8
+          lg:px-0
+        ">
+      <h2 class="h2 text-white">Vision</h2>
+      <p class="text-white my-4 text-lg leading-25 md:text-xl md:leading-34">
+        To provide quality healthcare solutions globally by leveraging our scientific strengths.
+      </p>
+    </div>
+  </section>
+  <section class="redStrip py-20">
+    <div class="
+          container
+          text-center
+          mx-auto
+          max-w-4xl
+          lg:mb-32
+          px-4
+          md:px-8
+          lg:px-0
+        ">
+      <h2 class="h2 text-white">Core Values</h2>
+      <p class="text-white my-4 text-lg leading-25 md:text-xl md:leading-34">
+        To leverage the synthesis between biotechnology and chemistry to
+        develop innovative and affordable healthcare solutions. We are guided
+        by our core values of quality & patient-focused, integrity,
+        innovation, team work & respect, and value-driven.
+      </p>
+    </div>
+  </section>
+  <section class="
+        md:-mt-20
+        lg:-mt-40
+        mb-20
+        2xl:mb-40
+        container
+        max-w-wrapper
+        mx-auto
+      ">
+    <div class="
+          grid grid-cols-1
+          md:grid-cols-2
+          px-4
+          md:px-8
+          lg:px-0 lg:grid-cols-3
+          my-6
+          gap-5
+        ">
+      <partial name="tile-box.html" image="./assets/images/aboutus/overview/vision-Quality.png"
+        line1="Quality & patient- focused" line2="Deliver value and superior results in line with the evolving
+        needs of the patients" />
+      <partial name="tile-box.html" image="./assets/images/aboutus/overview/vision-Integrity.png" line1="Integrity"
+        line2="Committed to deliver results while being ethical, honest and
+            transparent in our approach" />
+      <partial name="tile-box.html" image="./assets/images/aboutus/overview/vison-Innovation.png" line1="Innovation"
+        line2="Make courageous choices for agile transformation, with the aim to
+            drive efficiency, effectiveness and growth" />
+    </div>
+    <div class="max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 px-4 md:px-8 my-6 gap-5">
+        <partial name="tile-box.html" image="./assets/images/aboutus/overview/vision-team.png"
+          line1="Team work & Respect" line2="Champion a collaborative approach and celebrate the dilligence
+                and achievements of our people" />
+        <partial name="tile-box.html" image="./assets/images/aboutus/overview/vision-Value.png" line1="Value driven"
+          line2="Take charge and set ambitious goals to constantly deliver
+                excellence" />
+      </div>
+    </div>
+  </section>
+  <!-- About Us Footer -->
+  <partial name="redstrip-section.html" title="Know More About Us" css-prev="myswiper-button-prev"
+    css-next="myswiper-button-next" />
+  <section class="-mt-20">
+    <div class="w-full h-350 overflow-hidden swiper-container mySwiper">
+      <div class="flex swiper-wrapper">
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore2.png"
+          title="Vision & Values" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore3.png"
+          title="Milestones" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore4.png"
+          title="Leadership" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/overview/aboutus-knowmore1.png"
+          title="Awards & Recognition" />
+        <partial name="slider/slide-square.html" image="./assets/images/csr.png" title="CSR" />
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <div class="md:h-20"></div>
+  <partial name="redstrip-section.html" title="Quick Explore" css-prev="myswiper2-button-prev"
+    css-next="myswiper2-button-next" />
+  <section class="-mt-20">
+    <div class="w-full h-350 overflow-hidden swiper-container mySwiper2">
+      <div class="flex swiper-wrapper">
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/4.png" title="About us" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/1.png" title="Research" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/2.png" title="Careers" />
+        <partial name="slider/slide-square.html" image="./assets/images/aboutus/3.png" title="Blog" />
+      </div>
+    </div>
+  </section>
+  <div class="md:h-20"></div>
+  <partial name="footer.html" />
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./script.js"></script>
+  <script>
+    const toggleMenu = () => {
+      document.getElementById("menu").classList.toggle("hidden");
+    };
+    allMenuItems = document.querySelectorAll("#menu li");
+    allMenuItems.forEach((item) => {
+      if (item.firstElementChild) {
+        item.addEventListener("click", () => {
+          item.firstElementChild.classList.toggle("hidden");
+        });
+      }
+    });
+    window.onload = (event) => {
+      var swipera = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        slidesPerView: "auto",
+        autoplay: {
+          delay: 3000,
+        },
+        loop: true,
+        navigation: {
+          nextEl: ".myswiper-button-next",
+          prevEl: ".myswiper-button-prev",
+        },
+      });
+      var swiperb = new Swiper(".mySwiper2", {
+        spaceBetween: 30,
+        slidesPerView: "auto",
+        autoplay: {
+          delay: 3000,
+        },
+        loop: true,
+        navigation: {
+          nextEl: ".myswiper2-button-next",
+          prevEl: ".myswiper2-button-prev",
+        },
+      });
+      const expandables = document.querySelectorAll(".dropdown");
+      expandables.forEach((expandable) => {
+        expandable.parentElement.style.minHeight =
+          expandable.offsetHeight + 32 + "px";
+        expandable.addEventListener("click", () => {
+          expandable.parentElement.classList.toggle("h-28");
+
+          expandable.parentElement.classList.toggle("shadow-2xl");
+          expandable.parentElement.classList.toggle("my-10");
+          expandable.nextElementSibling.classList.toggle("opacity-0");
+
+          expandable.classList.toggle("opened");
+        });
+      });
+    };
+  </script>
+</body>
+
+</html>

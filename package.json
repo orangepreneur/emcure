@@ -1,0 +1,21 @@
+{
+  "name": "emcure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss build ./devcss/style.css -o ./src/style.css && css-minify -f ./src/style.css -o ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.2.6",
+    "css-minify": "^1.1.0",
+    "gluu": "^0.0.15",
+    "live-server": "^1.2.1",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.1.4"
+  }
+}

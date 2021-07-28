@@ -1,100 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-<partial title="Emcure" name="head.html"></partial>
+<partial title="Emcure" name="head.html">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <style>
+    .slick-list,
+    .slick-track,
+    #homeSlides .container {
+      height: 100%;
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      width: 100%;
+      max-width: 80rem;
+      transform: translateX(-50%);
+      display: flex !important;
+      justify-content: space-between;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+
+    .slick-dots li {
+      display: inline-block;
+      color: white;
+      overflow: hidden;
+      position: relative;
+      opacity: 0.7;
+    }
+
+    .slick-dots li.slick-active {
+      opacity: 1;
+    }
+
+    .slick-dots li span {
+      position: relative;
+      display: inline-block;
+      padding: 1.5rem 0 1rem;
+    }
+
+    .slick-dots li span:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 5px;
+      transition: 0.1s all linear;
+      background-image: linear-gradient(to right, #dd1818, #870000);
+    }
+
+    .slick-dots li.slick-active span:after {
+      animation: border-timeout 4s linear forwards;
+    }
+
+    .slick-slide>div {
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
+
+    .slick-slide.slick-active>div:not(.container) {
+      animation: zoom 3s linear forwards;
+    }
+
+    @keyframes border-timeout {
+      from {
+        width: 0%;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(1.05);
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .sub-menu.absolute {
+        position: static;
+      }
+
+      .slick-dots {
+        justify-content: center !important;
+      }
+
+      .slick-dots li span {
+        font-size: 0;
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border-radius: 50%;
+        padding: 0;
+        margin: 0 5px;
+        display: block;
+      }
+
+      .slick-dots li span:after {
+        display: none;
+      }
+    }
+  </style>
+
+</partial>
 
 <body>
   <partial name="header.html" />
+  <!-- new slider -->
   <section>
-    <div class="featuredSlider w-full h-52 relative md:h-500 2xl:h-banner slides">
-      <partial id="banner-1" name="homepageSlider/customSliderSlide.html"
-        image="./assets/images/technology-driven.jpg" />
-      <partial id="banner-2" class="hidden" name="homepageSlider/customSliderSlide.html"
-        image="./assets/images/ranked-9th-largest.jpg" />
-      <partial id="banner-3" class="hidden" name="homepageSlider/customSliderSlide.html"
-        image="./assets/images/mrna-vaccine.jpg" />
-      <partial id="banner-4" class="hidden" name="homepageSlider/customSliderSlide.html"
-        image="./assets/images/committed-to-ensure.jpg" />
-      <div class="
-            w-full
-            z-0
-            absolute
-            top-0
-            h-52
-            md:h-500
-            2xl:h-banner
-            bg-gradient-to-t
-            from-black
-            opacity-40
-            via-transparent
-            to-transparent
-          "></div>
-      <div style="
-    position: absolute;
-    left: 50%;
-    top: 10px;
-    color: white;
-    transform: translatex(-50%);
-  " class="
-    bottom-0
+    <div id="homeSlides" class=" w-full h-52 relative md:h-500 2xl:h-banner ">
+      <div nav-text="Technology Driven">
+        <div style="
+      background: url('./assets/images/technology-driven.jpg');
+      background-size: cover;
+    "></div>
+        <div class="
     container
     px-3
     mb-4
+    mx-auto
     max-w-7xl
-    w-full
     flex
-    items-center
-  ">
-
-        <partial targetId="banner-text-1" name="homepageSlider/singleSlideText.html">
-          Technology driven biopharma player with differentiated portfolio and
-          global presence
-        </partial>
-        <partial targetId="banner-text-2" class="hidden" name="homepageSlider/singleSlideText.html">
-          Ranked 9th largest pharma player in India and fastest growing*
-          <br /><span class="text-xs">(* as per AIOCD-AWACS April 2021)</span>
-        </partial>
-        <partial targetId="banner-text-3" class="hidden" name="homepageSlider/singleSlideText.html">
-          Developing India’s first indigenous mRNA vaccine for<br />
-          COVID-19
-        </partial>
-        <partial targetId="banner-text-4" class="hidden" name="homepageSlider/singleSlideText.html">
-          Committed to ensure dedicated support in the fight against
-          <br />COVID- 19
-        </partial>
-
+    items-center">
+          <h3 class="slideText
+    text-xl
+    md:text-2xl
+    lg:text-56
+    leading-tight
+    lg:leading-tight
+    text-white
+    md:w-700
+    w-2/3
+    font-semibold">
+            Technology driven biopharma player with differentiated portfolio and
+            global presence
+          </h3>
+        </div>
       </div>
-      <div style="
-            position: absolute;
-            left: 50%;
-            color: white;
-            transform: translatex(-50%);
-          " class="bottom-4 md:bottom-12 container max-w-7xl mx-auto">
-        <ul id="banner-links" class="hidden w-full md:flex flex-wrap items-center">
-          <partial targetId="banner-link-1" name="homepageSlider/singleSlideBullet.html" dataId="1">
-            Technology Driven
-          </partial>
-          <partial targetId="banner-link-2" name="homepageSlider/singleSlideBullet.html" dataId="2"
-            class="border-opacity-40">
-            Ranked 9th largest
-          </partial>
-          <partial targetId="banner-link-3" name="homepageSlider/singleSlideBullet.html" dataId="3"
-            class="border-opacity-40">
-            Developing India's
-          </partial>
-          <partial targetId="banner-link-4" name="homepageSlider/singleSlideBullet.html" dataId="4"
-            class="border-opacity-40">
-            Commited to ensure
-          </partial>
-        </ul>
-        <ul id="dot-banner-links" class="md:hidden flex items-center justify-center w-40 mx-auto">
-          <li id="dot-banner-link-1" data-id="1" class="w-2 h-2 bg-white rounded-full mx-1"></li>
-          <li id="dot-banner-link-2" data-id="2" class="w-2 h-2 bg-white opacity-30 rounded-full mx-1"></li>
-          <li id="dot-banner-link-3" data-id="3" class="w-2 h-2 bg-white opacity-30 rounded-full mx-1"></li>
-          <li id="dot-banner-link-4" data-id="4" class="w-2 h-2 bg-white opacity-30 rounded-full mx-1"></li>
-        </ul>
+      <div nav-text="Ranked 9th largest">
+        <div style="
+      background: url('./assets/images/ranked-9th-largest.jpg');
+      background-size: cover;
+    "></div>
+        <div class="
+    container
+    px-3
+    mb-4
+    mx-auto
+    max-w-7xl
+    flex
+    items-center">
+          <h3 class="slideText
+  text-xl
+  md:text-2xl
+  lg:text-56
+  leading-tight
+  lg:leading-tight
+  text-white
+  md:w-700
+  w-2/3
+  font-semibold">
+            Ranked 9th largest pharma player in India and fastest growing*
+            <br><span class="text-xs">(* as per AIOCD-AWACS April 2021)</span>
+          </h3>
+        </div>
+      </div>
+      <div nav-text="Developing India's">
+        <div style="
+      background: url('./assets/images/mrna-vaccine.jpg');
+      background-size: cover;
+    "></div>
+        <div class="
+    container
+    px-3
+    mb-4
+    mx-auto
+    max-w-7xl
+    flex
+    items-center">
+          <h3 class="slideText
+    text-xl
+    md:text-2xl
+    lg:text-56
+    leading-tight
+    lg:leading-tight
+    text-white
+    md:w-700
+    w-2/3
+    font-semibold"> Developing India’s first indigenous mRNA vaccine for<br>
+            COVID-19</h3>
+        </div>
+      </div>
+      <div nav-text="Commited to ensure">
+        <div style="
+      background: url('./assets/images/committed-to-ensure.jpg');
+      background-size: cover;
+    "></div>
+        <div class="
+    container
+    px-3
+    mb-4
+    mx-auto
+    max-w-7xl
+    flex
+    items-center">
+          <h3 class="slideText
+    text-xl
+    md:text-2xl
+    lg:text-56
+    leading-tight
+    lg:leading-tight
+    text-white
+    md:w-700
+    w-2/3
+    font-semibold"> Committed to ensure dedicated support in the fight against
+            <br>COVID- 19
+          </h3>
+        </div>
       </div>
     </div>
   </section>
+  <!-- new slider end -->
   <section class="bg-gradient-to-r from-primary-light to-primary-dark">
     <div class="
           container
@@ -859,6 +995,7 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./jquery.js"></script>
   <script src="./tooltip.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script>
     let index = 1;
     const toggleMenu = () => {
@@ -873,54 +1010,6 @@
         });
       }
     });
-    const banners = document.querySelectorAll(".banners");
-    const bannerTexts = document.querySelectorAll(".bannerTexts");
-    const bannerlinks = document.querySelectorAll("#banner-links li");
-    const Dotbannerlinks = document.querySelectorAll("#dot-banner-links li");
-
-    const unsetActiveLinks = () => {
-      bannerlinks.forEach((link) => {
-        if (!link.classList.contains("border-opacity-40"))
-          return link.classList.add("border-opacity-40");
-      });
-      Dotbannerlinks.forEach((link) => {
-        if (!link.classList.contains("opacity-30"))
-          return link.classList.add("opacity-30");
-      });
-    };
-
-    const hideAllBanners = () => {
-      banners.forEach((banner) => {
-        if (!banner.classList.contains("hidden"))
-          return banner.classList.add("hidden");
-      });
-    };
-    const hideAllBannerTexts = () => {
-      bannerTexts.forEach((banner) => {
-        if (!banner.classList.contains("hidden"))
-          return banner.classList.add("hidden");
-      });
-    };
-    const showBanner = (id) => {
-      hideAllBanners();
-      hideAllBannerTexts();
-      unsetActiveLinks();
-      document.getElementById(`banner-${id}`).classList.remove("hidden");
-      document.getElementById(`banner-text-${id}`).classList.remove("hidden");
-      document
-        .getElementById(`banner-link-${id}`)
-        .classList.remove("border-opacity-40");
-    };
-    const showDotBanner = (id) => {
-      hideAllBanners();
-      hideAllBannerTexts();
-      unsetActiveLinks();
-      document.getElementById(`banner-${id}`).classList.remove("hidden");
-      document.getElementById(`banner-text-${id}`).classList.remove("hidden");
-      document
-        .getElementById(`dot-banner-link-${id}`)
-        .classList.remove("opacity-30");
-    };
     window.onload = (event) => {
       var swipera = new Swiper(".mySwiper", {
         spaceBetween: 30,
@@ -977,30 +1066,25 @@
           prevEl: ".newsroom-swiper-button-prev",
         },
       });
-      bannerlinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          showBanner(link.getAttribute("data-id"));
-        });
-      });
-      Dotbannerlinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          showDotBanner(link.getAttribute("data-id"));
-        });
-      });
 
-      autoSlideBanner();
-      ScrollReveal().reveal("section");
-    };
+      // new slider
 
-    const autoSlideBanner = () => {
-      console.log(index);
-      setTimeout(() => {
-        if (index == bannerlinks.length) index = 1;
-        else index++;
-        showBanner(index);
-        autoSlideBanner(index);
-      }, 4000);
-    };
+      $('#homeSlides').slick({
+        autoplay: true,
+        autoplayspeed: 4000,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        customPaging: function (slider, i) {
+          return '<span class="cursor-pointer text-17 truncate">' + $(slider.$slides[i]).attr('nav-text') + '</span>';
+        },
+      });
+    }
   </script>
 </body>
 

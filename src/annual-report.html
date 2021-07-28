@@ -92,16 +92,205 @@
           <div class=" p-8  w-4/6">
             <h3 class="h2 lg:text-22">Annual Report 2018-19</h3>
           </div>
-          <a href="./assets/2018-19.pdf" target="_blank"
-            class="hover:redStrip cursor-pointer bg-white  m-1 w-1/6 self-stretch text-lg text-semibold flex items-center justify-center rounded-lg text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>&nbsp;&nbsp;Download
-          </a>
+          <a href="./assets/2018-<div class=" w-full my-10">Sample Type: [radio sample-type use_label_element default:1
+            "FLAVOUR" "FRAGRANCE" "AROMA CHEMICALS" "FLAVOUR EMULSION" "SPRAY DRIED POWDER"]
+        </div>[group flavours clear_on_hide]<div class="w-full md:flex items-center my-10">Application:<ul
+            class="form-application">
+            <li><input id="Dairy" type="checkbox" name="application[]" value="Dairy"> <label for="Dairy">
+                <div>
+                  <div class="dairy circle"></div>Dairy
+                </div>
+              </label></li>
+            <li><input id="Pharma" type="checkbox" name="application[]" value="Pharma"> <label for="Pharma">
+                <div>
+                  <div class="pharma circle"></div>Pharma
+                </div>
+              </label></li>
+            <li><input id="Hookah" type="checkbox" name="application[]" value="Hookah"> <label for="Hookah">
+                <div>
+                  <div class="hookah circle"></div>Hookah
+                </div>
+              </label></li>
+            <li><input id="Bakery" type="checkbox" name="application[]" value="Bakery"> <label for="Bakery">
+                <div>
+                  <div class="bakary circle"></div>Bakery
+                </div>
+              </label></li>
+            <li><input id="Alchoholic" type="checkbox" name="application[]" value="Alchoholic Beverages"> <label
+                for="Alchoholic">
+                <div>
+                  <div class="alchoholic circle"></div>Alchoholic Beverages
+                </div>
+              </label></li>
+            <li><input id="Non" type="checkbox" name="application[]" value="Non-Alcoholic Beverages"> <label for="Non">
+                <div>
+                  <div class="nonalcoholic circle"></div>Non-Alcoholic Beverages
+                </div>
+              </label></li>
+            <li><input id="Candy" type="checkbox" name="application[]" value="Candy Confectionery"> <label for="Candy">
+                <div>
+                  <div class="candy circle"></div>Candy Confectionery
+                </div>
+              </label></li>
+          </ul>
+        </div>[/group] [group fragrances clear_on_hide]<div class="w-full md:flex items-center my-10">Application:<ul
+            class="form-application">
+            <li><input id="home-care" type="checkbox" name="application[]" value="Home Care"> <label for="home-care">
+                <div>
+                  <div class="homecare circle"></div>Home Care
+                </div>
+              </label></li>
+            <li><input id="AirCare" type="checkbox" name="application[]" value="Air Care"> <label for="AirCare">
+                <div>
+                  <div class="aircare circle"></div>Air Care
+                </div>
+              </label></li>
+            <li><input id="PersonalCare" type="checkbox" name="application[]" value="Personal Care"> <label
+                for="PersonalCare">
+                <div>
+                  <div class="personalcare circle"></div>Personal Care
+                </div>
+              </label></li>
+            <li><input id="FinePerfume" type="checkbox" name="application[]" value="Fine Perfume"> <label
+                for="FinePerfume">
+                <div>
+                  <div class="fineperfume circle"></div>Fine Perfume
+                </div>
+              </label></li>
+          </ul>
+        </div>[/group]<div class="w-full md:flex my-10">
+          <div class="md:w-1/2 my-3">Colour Required: [text color class:px-4 class:py-2 placeholder "Enter Color"]</div>
+          <div class="md:w-1/2 my-3">Profile Requirement: [text profile class:px-4 class:py-2 placeholder "Enter
+            Profile"]</div>
         </div>
+        <div class="w-full md:flex my-10">
+          <div class="md:w-1/2 my-3">Quantity Required: [text quantity class:px-4 class:py-2 placeholder "Enter
+            Quantity"]</div>
+          <div class="md:w-1/2 my-3">Packaging: [radio packaging use_label_element default:1 "5Kg" "25Kg" "200Kg" "Any
+            Other"]</div>
+        </div>
+        <div class="w-full md:flex my-10">
+          <div class="md:w-1/2 my-3">Intended Product Market: [select product-market use_label_element default:1
+            class:px-4 class:py-2 include_blank "Europe" "Midde Easts" "Africa" "South America" "Asia"]</div>
+          <div class="md:w-1/2 my-3">Regulatory Requirement: [radio regulatory use_label_element default:1 "Kosher"
+            "Halal" "Any Other"]</div>
+        </div>
+        <div class="md:flex justify-center"><button class="text-white bg-black px-4 py-2" id="submit">Submit</button>
+        </div>
+        <p style="display:none">[checkbox application id:applicationCheckbox use_label_element "Item1" "Item2"]</p>
+        <style>
+          ul.form-application {
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;
+            display: flex
+          }
+
+          ul.form-application li label>div {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-flow: column
+          }
+
+          ul.form-application li {
+            width: 120px;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0 10px;
+            font-size: 14px;
+            display: flex;
+            overflow-wrap: anywhere;
+            text-align: center
+          }
+
+          .circle {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #d4d4d4;
+            border-radius: 100%;
+            margin-bottom: 10px
+          }
+
+          .sample-type input {
+            margin-left: 20px
+          }
+
+          .dairy.circle {
+            background-image: url(https://csff.orangewp.com/wp-content/themes/csff/assets/images/services/5.png);
+            background-size: cover;
+            object-fit: cover
+          }
+
+          .pharma.circle {
+            background-image: url(https://csff.orangewp.com/wp-content/themes/csff/assets/images/services/6.png);
+            background-size: cover;
+            object-fit: cover
+          }
+
+          .hookah.circle {
+            background-image: url(https://csff.orangewp.com/wp-content/themes/csff/assets/images/services/7.png);
+            background-size: cover;
+            object-fit: cover
+          }
+
+          .bakary.circle {
+            background-image: url(https://csff.orangewp.com/wp-content/themes/csff/assets/images/services/8.png);
+            background-size: cover;
+            object-fit: cover
+          }
+
+          .alchoholic.circle {
+            background-image: url(https://csff.orangewp.com/wp-content/themes/csff/assets/images/services/9.png);
+            background-size: cover;
+            object-fit: cover
+          }
+
+          .nonalcoholic.circle {
+            background-image: url(https://csff.orangewp.com/wp-content/themes/csff/assets/images/services/10.png);
+            background-size: cover;
+            object-fit: cover
+          }
+
+          .candy.circle {
+            background-image: url(https://csff.orangewp.com/wp-content/themes/csff/assets/images/services/11.png);
+            background-size: cover;
+            object-fit: cover
+          }
+
+          .homecare.circle {
+            background-image: url(https://csff.orangewp.com/wp-content/themes/csff/assets/images/services/1.png);
+            background-size: cover;
+            object-fit: cover
+          }
+
+          .aircare.circle {
+            background-image: url(https://csff.orangewp.com/wp-content/themes/csff/assets/images/services/2.png);
+            background-size: cover;
+            object-fit: cover
+          }
+
+          .personalcare.circle {
+            background-image: url(https://csff.orangewp.com/wp-content/themes/csff/assets/images/services/3.png);
+            background-size: cover;
+            object-fit: cover
+          }
+
+          .fineperfume.circle {
+            background-image: url(https://csff.orangewp.com/wp-content/themes/csff/assets/images/services/4.png);
+            background-size: cover;
+            object-fit: cover
+          }
+        </style>19.pdf" target="_blank"
+        class="hover:redStrip cursor-pointer bg-white m-1 w-1/6 self-stretch text-lg text-semibold flex items-center
+        justify-center rounded-lg text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>&nbsp;&nbsp;Download
+        </a>
       </div>
+    </div>
     </div>
   </section>
   <!-- About Us Footer -->

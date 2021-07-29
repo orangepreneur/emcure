@@ -1,1 +1,1 @@
-ScrollReveal().reveal("section");
+// ScrollReveal().reveal("section");

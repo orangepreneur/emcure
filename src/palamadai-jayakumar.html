@@ -64,165 +64,26 @@
     </div>
   </section>
   <!-- About Us Footer -->
-  <section class="redStrip px-4 md:px-8 w-full h-60 py-12">
-    <div class="container mx-auto max-w-wrapper md:flex justify-between">
-      <h3 class="h2 text-white">Know More About Us</h3>
-      <div class="flex mt-2 md:mb-10 md:mt-4">
-        <div class="mx-2 myswiper-button-prev">
-          <img width="40" src="./assets/images/left-transparent.png" alt="" />
-        </div>
-        <div class="mx-2 myswiper-button-next">
-          <img width="40" src="./assets/images/right-transparent.png" alt="" />
-        </div>
-      </div>
-    </div>
-  </section>
+  <partial name="redstrip-section.html" title="Know More About Us" css-prev="myswiper-button-prev"
+    css-next="myswiper-button-next" />
   <section class="-mt-20">
     <div class="w-full h-350 overflow-hidden swiper-container mySwiper">
       <div class="flex swiper-wrapper">
-        <div class="swiper-slide w-full md:w-384" style="
-              overflow: hidden;
-              flex: none;
-
-              height: 288px;
-              border-radius: 6px;
-              background-size: cover;
-              background-image: url(./assets/images/aboutus/4.png);
-            ">
-          <div class="
-                w-full
-                h-full
-                bg-gradient-to-t
-                from-black
-                via-transparent
-                to-transparent
-              " style="
-                display: flex;
-                align-items: flex-end;
-                font-size: 20px;
-                font-weight: 600;
-                color: white;
-                padding: 15px;
-              ">
-            Overview
-          </div>
-        </div>
-
-        <div class="swiper-slide w-full md:w-384" style="
-              overflow: hidden;
-              flex: none;
-
-              height: 288px;
-              border-radius: 6px;
-              background-size: cover;
-              background-image: url(./assets/images/aboutus/overview/aboutus-knowmore2.png);
-            ">
-          <div class="
-                w-full
-                h-full
-                bg-gradient-to-t
-                from-black
-                via-transparent
-                to-transparent
-              " style="
-                display: flex;
-                align-items: flex-end;
-                font-size: 20px;
-                font-weight: 600;
-                color: white;
-                padding: 15px;
-              ">
-            Vision & Values
-          </div>
-        </div>
-
-        <div class="swiper-slide w-full md:w-384" style="
-              overflow: hidden;
-              flex: none;
-
-              height: 288px;
-              border-radius: 6px;
-              background-size: cover;
-              background-image: url(./assets/images/aboutus/overview/aboutus-knowmore3.png);
-            ">
-          <div class="
-                w-full
-                h-full
-                bg-gradient-to-t
-                from-black
-                via-transparent
-                to-transparent
-              " style="
-                display: flex;
-                align-items: flex-end;
-                font-size: 20px;
-                font-weight: 600;
-                color: white;
-                padding: 15px;
-              ">
-            Milestones
-          </div>
-        </div>
-
-        <div class="swiper-slide w-full md:w-384" style="
-              overflow: hidden;
-              flex: none;
-
-              height: 288px;
-              border-radius: 6px;
-              background-size: cover;
-              background-image: url(./assets/images/aboutus/overview/aboutus-knowmore1.png);
-            ">
-          <div class="
-                w-full
-                h-full
-                bg-gradient-to-t
-                from-black
-                via-transparent
-                to-transparent
-              " style="
-                display: flex;
-                align-items: flex-end;
-                font-size: 20px;
-                font-weight: 600;
-                color: white;
-                padding: 15px;
-              ">
-            Awards & Recognition
-          </div>
-        </div>
-
-        <div class="swiper-slide w-full md:w-384" style="
-              overflow: hidden;
-              flex: none;
-
-              height: 288px;
-              border-radius: 6px;
-              background-size: cover;
-              background-image: url(./assets/images/aboutus/overview/CSR.png);
-            ">
-          <div class="
-                w-full
-                h-full
-                bg-gradient-to-t
-                from-black
-                via-transparent
-                to-transparent
-              " style="
-                display: flex;
-                align-items: flex-end;
-                font-size: 20px;
-                font-weight: 600;
-                color: white;
-                padding: 15px;
-              ">
-            CSR
-          </div>
-        </div>
+        <partial link="./aboutus-overview.html" name="slider/slide-square.html" image="./assets/images/aboutus/4.png"
+          title="Overview" />
+        <partial link="./aboutus-vision_values.html" name="slider/slide-square.html"
+          image="./assets/images/aboutus/overview/aboutus-knowmore2.png" title="Vision & Values" />
+        <partial link="./aboutus-milestones.html" name="slider/slide-square.html"
+          image="./assets/images/aboutus/overview/aboutus-knowmore3.png" title="Milestones" />
+        <partial link="./aboutus-awards.html" name="slider/slide-square.html"
+          image="./assets/images/aboutus/overview/aboutus-knowmore1.png" title="Awards & Recognition" />
+        <partial link="./aboutus-csr.html" name="slider/slide-square.html" image="./assets/images/csr.png"
+          title="CSR" />
       </div>
       <div class="swiper-pagination"></div>
     </div>
   </section>
+  <div class="md:h-20"></div>
   <partial name="redstrip-section.html" title="Quick Explore" css-prev="myswiper2-button-prev"
     css-next="myswiper2-button-next" />
   <section class="-mt-20">
